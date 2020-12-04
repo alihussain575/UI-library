@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Car {
+            constructor(name, model) {
+                this.name = name;
+                this.model = model;
+                this.isStarted = false;
+            }
+            start() {
+                if (this.isStarted === false) {
+                    console.log(`${this.name} is starting`)
+                    this.isStarted = true;
+                } else {
+                    console.warn(`${this.name} is already started`)
+                }
+            }
+            stop() {
+                if (this.isStarted === true) {
+                    console.log(`${this.name} is stopping`)
+                    this.isStarted = false;
+                } else {
+                    console.warn(`${this.name} is already stopped`)
+                }
+            }
+        }
+
+        class AutomaticCar extends Car {
+            constructor(name, model) {
+                super(name, model)
+            }
+            automaticallyChangeGears() {
+                console.log("automaticallyChangeGears")
+            }
+        }
+
+        let lamborghini = new Car("Lamborghini", "2000");
+        let premio = new Car("Toyota Premio", "2000")
+        let premio2009 = new AutomaticCar("Toyota Premio", "2009")
+
+        console.log(lamborghini)
+
+
+
+
+            // class Articles {
+            //     constructor() {
+            //         this.articles = []
+            //     }
+            //     addArticle(article) {
+            //         this.articles.push(article)
+            //     }
+            //     getArticles() {
+            //         return this.articles;
+            //     }
+            // }
+
+            // const articles = new Articles();
+
+            // app.get("/articles-api", function (req, res) {
+            //     res.json(articles.getArticles())
+            // })
+
+            // app.post("/create-article", function (req,res) {
+            //     articles.addArticle(req.body)
+            // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

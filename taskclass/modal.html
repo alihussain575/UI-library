@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Creating a Modal in Javascript -->
+    ​
+    <div class="modal-container">
+        <div class="modal-overlay-container">
+            <div class="modal-content">
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <button class="button-that-toggle-modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="button-that-toggle-modal">Open Modal</button>
+    ​
+    <style>
+        .modal-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.1s;
+        }
+
+        ​ .modal-overlay-container {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-content {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 10px;
+            margin-top: 25px;
+            border-radius: 12px;
+        }
+
+        ​ .modal-container.visible {
+            opacity: 0;
+            visibility: none;
+            transition: all 0.2s;
+        }
+    </style>
+    
+    ​
+    <script>
+        const buttons = document.querySelectorAll(".button-that-toggle-modal");
+        buttons.forEach((button) => {
+            button.addEventListener("click", () => {
+                document
+                    .querySelector(".modal-container")
+                    .classList.toggle("visible");
+            });
+        });
+    </script>
+    ​
+    <!-- Introduction to Domains and Hosting -->
+    ​
+    <!-- Hosting is a computer like yours with an IP  -->
+    ​
+    <!-- HOSTING/SERVER 115.156.203.11  20GB RAM / 100GB HD
+      www.google.com refers to ip 115.156.203.11.
+      When refers to ip 115.156.203.11 it first check the site is available on port 8080. Like the site is running at 115.156.203.11:8080 -->
+    ​
+    <!-- Introduction to dev Ops -->
+    ​
+    <!-- What is devs ops? Dev ops is the process of handling online servers. Like if ali is working on server/hosting 115.156.203.11 he actually doing dev ops. Like domain management, like website deployment. Like website speed testing, like website server setup, ram and storage management. He actually cares about how website is deploying and running online. Dev ops guys also install applications on serers like php, node js , git, java, python, php etc.  -->
+    ​
+    <!-- How we deploy websites -->
+    <!-- For example i have a website called google.com and I setup a git repo for that which master branch as default branch. So basically when I push the code to the branch I have to deploy it to my server 115.156.203.11. So I push code from my local computer. And I log into the server and pull the code. -->
+    ​
+    <!-- Local: Php, Git, Laravel, Python -->
+    <!-- 115.156.203.11: Php, Git, Laravel, Python -->
+    ​
+    <!-- Things to study for this: Deployment, Continous Integration, Github Actions and Circle CI. -->
+    ​
+    <!-- Introduction to Axios -->
+    <!-- https://github.com/axios/axios -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <!-- <script>
+        (async () => {
+            // Absolute URL: Which shows whole URl like  https://jsonplaceholder.typicode.com/
+            // Relative URl: Which shows simple path like: /posts, /comments, /posts/1
+            // Fetch posts
+            const axiosInstance = axios.create({
+                baseURL: "https://jsonplaceholder.typicode.com/",
+            });
+
+            try {
+                console.log("start fetch");
+                const posts = await axiosInstance.get("/posts");
+                console.log("posts fetched now fetching comments");
+                const comments = await axiosInstance.get("/comments");
+                console.log("comments fetched and now deleting post");
+                await axiosInstance.delete("/posts/1");
+                console.log("Post delete");
+            } catch (e) {
+                console.warn("Error happened");
+                console.log(e);
+            }
+        })();
+    </script> -->
+</body>
+
+</html>

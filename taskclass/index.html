@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        class person {
+            constructor(name, dob){
+                this.name = name 
+                this.dob = dob
+                this.isWalking = false
+                this.isSleeping = false
+                this.isEating = false
+                this.isDancing = false
+            }
+        }
+        class john extends person {
+            constructor(name ,dob ){
+                super(name, dob)
+                this.isWalking = false  
+                this.isSleeping = true
+                this.isEating = false
+                this.isDancing = false
+            }
+            walking(){
+                if(this.isWalking ===true){
+                console.log(`${this.name} is walking`)
+                }else{
+                    console.log(`${this.name} is not walking`)
+                }
+            }
+            sleeping(){
+                if(this.isSleeping ===true){
+                console.log(`${this.name} is sleeping permenantly`)
+                }else{
+                    console.log(`${this.name} is not sleeping`)
+                }
+            }
+            eating(){
+                if(this.isEating ===true){
+                console.log(`${this.name} is eating`)
+                }else{
+                    console.log(`${this.name} is not eating`)
+                }
+            }
+            dancing(){
+                if(this.isDancing===true){
+                console.log(`${this.name} is dancing`)
+                }else{
+                    console.log(`${this.name} is not dancing`)
+                }
+            }
+        }
+        class alex extends john{
+            constructor(name ,dob){
+                super(name , dob)
+                
+                this.isWalking = false
+                this.isSleeping = true
+                this.isEating = false
+                this.isDancing = false
+            }
+            walking(){
+                if(this.isWalking ===true){
+                console.log(`${this.name} is walking`)
+                }else{
+                    console.log(`${this.name} is not walking`)
+                }
+            }
+            sleeping(){
+                if(this.isSleeping ===true){
+                console.log(`${this.name} is sleeping`)
+                }else{
+                    console.log(`${this.name} is not sleeping`)
+                }
+            }
+            eating(){
+                if(this.isEating ===true){
+                console.log(`${this.name} is eating`)
+                }else{
+                    console.log(`${this.name} is not eating`)
+                }
+            }
+            dancing(){
+                if(this.isDancing===true){
+                console.log(`${this.name} is dancing`)
+                }else{
+                    console.log(`${this.name} is not dancing`)
+                }
+            }
+        }
+        class shaw extends john{
+            constructor(name ,dob){
+                super(name ,dob)
+                this.isWalking = true
+                this.isSleeping = false
+                this.isEating = false
+                this.isDancing = false
+
+            }
+            walking(){
+                if(this.isWalking ===true){
+                console.log(`${this.name} is walking`)
+                }else{
+                    console.log(`${this.name} is not walking`)
+                }
+            }
+            sleeping(){
+                if(this.isSleeping ===true){
+                console.log(`${this.name} is sleeping`)
+                }else{
+                    console.log(`${this.name} is not sleeping`)
+                }
+            }
+            eating(){
+                if(this.isEating ===true){
+                console.log(`${this.name} is eating`)
+                }else{
+                    console.log(`${this.name} is not eating`)
+                }
+            }
+            dancing(){
+                if(this.isDancing===true){
+                console.log(`${this.name} is dancing`)
+                }else{
+                    console.log(`${this.name} is not dancing`)
+                }
+            }
+        }
+        class johny extends john{
+            constructor(name ,dob){
+                super(name ,dob)
+                this.isWalking = false
+                this.isSleeping = false
+                this.isEating = true
+                this.isDancing = false
+
+            }
+            walking(){
+                if(this.isWalking ===true){
+                console.log(`${this.name} is walking`)
+                }else{
+                    console.log(`${this.name} is not walking`)
+                }
+            }
+            sleeping(){
+                if(this.isSleeping ===true){
+                console.log(`${this.name} is sleeping`)
+                }else{
+                    console.log(`${this.name} is not sleeping`)
+                }
+            }
+            eating(){
+                if(this.isEating ===true){
+                console.log(`${this.name} is eating`)
+                }else{
+                    console.log(`${this.name} is not eating`)
+                }
+            }
+            dancing(){
+                if(this.isDancing===true){
+                console.log(`${this.name} is dancing`)
+                }else{
+                    console.log(`${this.name} is not dancing`)
+                }
+            }
+        }
+        class hales extends john{
+            constructor(name ,dob){
+                super(name ,dob)
+                this.isWalking = false
+                this.isSleeping = false
+                this.isEating = false
+                this.isDancing = true
+
+            }
+            walking(){
+                if(this.isWalking ===true){
+                console.log(`${this.name} is walking`)
+                }else{
+                    console.warn(`${this.name} is not walking`)
+                }
+            }
+            sleeping(){
+                if(this.isSleeping ===true){
+                console.log(`${this.name} is sleeping`)
+                }else{
+                    console.warn(`${this.name} is not sleeping`)
+                }
+            }
+            eating(){
+                if(this.isEating ===true){
+                console.log(`${this.name} is eating`)
+                }else{
+                    console.warn(`${this.name} is not eating`)
+                }
+            }
+            dancing(){
+                if(this.isDancing===true){
+                console.log(`${this.name} is dancing`)
+                }else{
+                    console.warn(`${this.name} is not dancing`)
+                }
+            }
+        }
+        class adam extends john{
+            constructor(name ,dob){
+                super(name ,dob)
+                this.isWalking = true
+                this.isSleeping = false
+                this.isEating = false
+                this.isDancing = false
+
+            }
+            walking(){
+                if(this.isWalking ===true){
+                console.log(`${this.name} is walking`)
+                }else{
+                    console.log(`${this.name} is not walking`)
+                }
+            }
+            sleeping(){
+                if(this.isSleeping ===true){
+                console.log(`${this.name} is sleeping`)
+                }else{
+                    console.log(`${this.name} is not sleeping`)
+                }
+            }
+            eating(){
+                if(this.isEating ===true){
+                console.log(`${this.name} is eating`)
+                }else{
+                    console.log(`${this.name} is not eating`)
+                }
+            }
+            dancing(){
+                if(this.isDancing===true){
+                console.log(`${this.name} is dancing`)
+                }else{
+                    console.log(`${this.name} is not dancing`)
+                }
+            }
+        }
+        let allFather = new person("person" , "1906")
+        console.log(allFather)
+        let father = new john("john" , "1930")
+        console.log(father)
+        console.log(father.sleeping())
+        let son1 = new alex( "alex", "1957")
+        console.log(son1)
+        console.log(son1.sleeping())
+        let daughter = new shaw( "shaw", "1960")
+        console.log(daughter)
+        console.log(daughter.walking())
+        let son2 = new johny( "johny" , "1965")
+        console.log(son2)
+        console.log(son2.eating())
+        let son3 = new hales( "hales","1964")
+        console.log(son3)
+        console.log(son3.dancing())
+        let son4 = new adam( "adam" , "1966")
+        console.log(son4)
+        console.log(son4.walking())
+
+
+    </script>
+</body>
+</html>

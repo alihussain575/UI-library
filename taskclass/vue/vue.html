@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Difference between UI libraries and custom Javascript (1hr) -->
+    <!-- Custom Javscript -->
+    <!-- <script>
+        let names = ["Ali", "Shams", "Ayaz"];
+        const renderUsers = () => {
+            document.querySelectorAll("h1").forEach(el => {
+                el.parentElement.removeChild(el);
+            });
+            names.forEach(element => {
+                let h1 = document.createElement("h1");
+                h1.innerHTML = element;
+                h1.addEventListener("click", (e) => {
+                    alert(e.target.innerHTML)
+                })
+                document.body.append(h1);
+            });
+        }
+        const input = document.createElement("input")
+        const button = document.createElement("button")
+        button.innerHTML = "Create User";
+        button.addEventListener("click" , () => {
+            names.push(input.value)
+            input.value = "";
+            renderUsers();
+        })
+        renderUsers()
+        document.body.append(input);
+        document.body.append(button);
+    </script> -->
+    <!-- Create Above Example in Vue JS -->
+    <!-- <div class="names-list" >
+        <h1 v-for="name in names" @click="h1HandleClick(name.name)"  >
+            {{name.name}}
+        </h1>
+        <input v-model="inputValue" type="text" placeholder="Add a user" >
+        <button @click="names.push({name: inputValue });inputValue = ''" >Add</button>
+    </div>
+    <script>
+        let app = new Vue({
+            el: ".names-list",
+            // Data
+            data: {
+                names: [{name: "Ali"},{name: "Ayaz"}],
+                inputValue: ""
+            },
+            // Methods
+            methods: {
+                h1HandleClick(name) {
+                    alert(name);
+                }
+            }
+        })
+    </script> -->
+
+    <div id="app">
+        <h1>events</h1>
+        <div class="input">
+            <input type="text" placeholder="what is your name" v-model="name" >
+            <button v-on:click = "inputName">submit</button>
+            <input type="number" placeholder="write your age" v-model ="age" >
+            <button v-on:click = "">submit</button>
+        </div>
+        <button v-on:click="add(1)"> add a year</button>
+        <button v-on:click="subtract(1)"> subtract a year</button>
+        <button v-on:click="add(10)"> add 10 years</button>
+        <button v-on:click="subtract(10)"> subtract 10 years</button>
+        <p>my age {{age}}</p>
+        <div id="canvas" @mousemove="updateXY">{{x}},{{y}}</div>
+    </div>
+
+
+    <script src="app.js"></script>
+
+
+    <style scoped>
+
+    </style>
+
+
+</body>
+
+</html>

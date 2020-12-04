@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        console.log("start")
+        function loginUser(email, password, callback) {
+            setTimeout(() => {
+                console.log("this is the data")
+                callback({ userEmail: email})
+            }, 3000)
+        }
+        function userVideo(email , callback) {
+            setTimeout(() => {
+                console.log("these are the videos")
+                callback (["video1", "video2", "video3"])
+            }, 2000)
+        }
+        function videoTitle(videos , callback){
+            setTimeout(()=>{
+                console.log("this is the video title")
+                callback ("hello world")
+            }, 3000)
+        }
+        const user = loginUser("faixanalibaig@gmail.com", 123456, user => {
+            console.log(user);
+            userVideo(user.userEmail , video =>{
+                console.log(video)
+                videoTitle(userVideo[0] , title =>{
+                    console.log(title)
+                } )
+            });
+        });
+        console.log("end")
+    </script>
+</body>
+
+</html>

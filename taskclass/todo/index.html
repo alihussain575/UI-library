@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ui Library</title>
+</head>
+<body>
+    <!-- 
+        Basic App:
+            1. State
+            2. Methods
+            3. Templates
+     -->
+    <div class="app"></div>
+    <div class="about"></div>
+    <script>
+        class UILibrary {
+            constructor(el, initialState = {}, methods = {}) {
+                this.el = document.querySelector(el);
+                this.state = initialState;
+                this.methods = methods;
+                this.renderTemplate()
+            }
+            updateState(obj) {
+                Object.keys(obj).forEach(variable => {
+                    const variableValue = obj[variable]
+                    this.state[variable] = variableValue
+                });
+                this.renderTemplate();
+            }
+            render() {
+                return ``
+            }
+            renderTemplate() {
+                let template = this.render();
+                Object.keys(this.state).forEach(variable => {
+                    const variableValue = this.state[variable]
+                    template = template.replace(new RegExp(`{{${variable}}}`, 'g'), variableValue)
+                });
+                this.el.innerHTML = template;
+            }
+        }
+        class Home extends UILibrary {
+            constructor(el, state, methods) {
+                super(el, state, methods)
+                setTimeout(() => {
+                    this.updateState({
+                        siteName: "Uconnect",
+                        date: "2015 Sept 1"
+                    })
+                }, 2000);
+            }
+            render() {
+                return `<h1>Welcome to {{siteName}} and its launch date is {{date}}. {{siteName}} is very powerful</h1>`
+            }
+        }
+        class About extends UILibrary {
+            render() {
+                return `
+                    <div>This is about page</div>
+                `
+            }
+        }
+        const app = new Home(".app", {
+            siteName: "Google",
+            date: "2019 March 12"
+        }, {});
+        const about = new About(".about", {
+        }, {});
+    </script>
+</body>
+</html>
